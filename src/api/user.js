@@ -29,3 +29,11 @@ export function getVerification() {
     method: "post",
   });
 }
+
+export function getPage(data) {
+  return request({
+    url: "manage/admin/page",
+    method: "post",
+    data,
+  });
+}
