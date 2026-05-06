@@ -15,3 +15,11 @@ export function visitorsStatistics(data) {
     data,
   });
 }
+
+export function blacklistPage(data) {
+  return request({
+    url: "manage/blacklist/page",
+    method: "post",
+    data,
+  });
+}

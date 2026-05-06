@@ -5,7 +5,7 @@
       :model="loginForm"
       :rules="loginRules"
       class="login-form"
-      autocomplete="on"
+      autocomplete="off"
       label-position="left"
     >
       <div class="title-container">
@@ -23,13 +23,13 @@
           name="username"
           type="text"
           tabindex="1"
-          autocomplete="on"
+          autocomplete="off"
         />
       </el-form-item>
 
       <el-tooltip
         v-model="capsTooltip"
-        content="Caps lock is On"
+        content="Caps lock已开启"
         placement="right"
         manual
       >
@@ -45,7 +45,7 @@
             placeholder="密码"
             name="password"
             tabindex="2"
-            autocomplete="on"
+            autocomplete="off"
             @keyup.native="checkCapslock"
             @blur="capsTooltip = false"
             @keyup.enter.native="handleLogin"
@@ -70,7 +70,7 @@
               name="verificationCode"
               type="text"
               tabindex="1"
-              autocomplete="on"
+              autocomplete="off"
             />
           </div>
           <div class="right" @click="fetchVerificationCode">
